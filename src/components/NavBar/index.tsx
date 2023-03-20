@@ -18,8 +18,8 @@ import { useState } from "react";
 export const NavBar = () => {
   const options = [
     { path: "/", name: "Home", id: 1 },
-    { path: "/feminine", name: "Feminine", id: 2 },
-    { path: "/masculine", name: "Masculine", id: 3 },
+    { path: "/feminine", name: "Female", id: 2 },
+    { path: "/masculine", name: "Male", id: 3 },
   ];
   const [select, setSelect] = useState(false);
 
@@ -28,7 +28,7 @@ export const NavBar = () => {
       <NavBarContent>
         <Logo />
         <InputContent>
-          <Input type="text" placeholder="Pesquisar" />
+          <Input type="text" placeholder="Search" />
           <SearchDiv>
             <SearchIcon />
           </SearchDiv>

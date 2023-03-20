@@ -7,22 +7,26 @@ export const NavBarContainer = styled.div`
   height: 200px;
   background-color: white;
   justify-content: columns;
+  font-family: "Roboto";
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
   -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
 `;
+
 export const NavBarContent = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-around;
 `;
+
 export const Input = styled.input`
   height: 2.5rem;
   width: 100%;
   border: 1px solid #cccccc;
   padding: 0 10px 0 20px;
 `;
+
 export const InputContent = styled.div`
   display: flex;
   flex-direction: row;
@@ -30,15 +34,18 @@ export const InputContent = styled.div`
   gap: 10px;
   width: 500px;
 `;
+
 export const IconsRoute = styled.div`
   display: flex;
   flex-direction: row;
+  gap: 20px;
 `;
+
 export const MenuContent = styled.div`
   display: flex;
   gap: 100px;
   width: 100%;
-  margin-left: 100px;
+  padding-left: 100px;
   justify-content: center;
   a {
     text-decoration: none;

@@ -1,20 +1,51 @@
+import {
+  Button,
+  Description,
+  DescriptionContainer,
+  ImageContainer,
+  Price,
+  PriceContainer,
+  ProductContainer,
+  ProductImage,
+  Title,
+} from "./styles";
+
 interface Props {
-    id: number;
-    category: string;
-    gender: string;
-    name: string;
-    description: string;
-    promo: number;
-    imgUrl: string;
-    sizes: Array<object>;
-    price: string;
+  id: number;
+  category: string;
+  gender: string;
+  name: string;
+  description: string;
+  promo: number;
+  imgUrl: string;
+  sizes: Array<object>;
+  price: string;
 }
 
-export const ProductCard = ({ id, name, gender, description, price, promo, imgUrl }: Props) => {
-    return <div className="product--card" key={id}>
-            <h1><a href="">{name}</a></h1>
-            <h2>{description}</h2>
-            <h2>{price}</h2>
-            <button>Adicionar ao Carrinho</button>
-        </div>
-  };
+export const ProductCard = ({
+  id,
+  name,
+  gender,
+  description,
+  price,
+  promo,
+  imgUrl,
+}: Props) => {
+  return (
+    <ProductContainer>
+      <ImageContainer>
+        <ProductImage></ProductImage>
+      </ImageContainer>
+      <Title>
+        <a href="">{name}</a>
+      </Title>
+      <DescriptionContainer>
+        <Description>{description}</Description>
+      </DescriptionContainer>
+      <PriceContainer>
+        <Price>R${price}</Price>
+      </PriceContainer>
+      <Button>Adicionar ao Carrinho</Button>
+    </ProductContainer>
+  );
+};

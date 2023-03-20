@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
 
 import App from "./App";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { GlobalStyles } from "./global/styles";
+import { GlobalStyles } from "./global/styled";
 
 import { Home } from "./pages/Home";
 import { Masculine } from "./pages/Masculine";
