@@ -6,8 +6,12 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { GlobalStyles } from "./global/styled";
 
 import { Home } from "./pages/Home";
-import { Masculine } from "./pages/Masculine";
-import { Feminine } from "./pages/Feminine";
+import { Man } from "./pages/Man";
+import { Woman } from "./pages/Woman";
+import { Underwear } from "./pages/Underwear";
+import { Pants } from "./pages/Pants";
+import { T_Shirts } from "./pages/T_Shirts";
+import { AddProduct } from "./pages/AddProduct";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -23,12 +27,28 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/masculine",
-        element: <Masculine />,
+        path: "/man",
+        element: <Man />,
       },
       {
-        path: "/feminine",
-        element: <Feminine />,
+        path: "/woman",
+        element: <Woman />,
+      },
+      {
+        path: "/underwear",
+        element: <Underwear />,
+      },
+      {
+        path: "/pants",
+        element: <Pants />,
+      },
+      {
+        path: "/t_shirts",
+        element: <T_Shirts />,
+      },
+      {
+        path: "/add_product",
+        element: <AddProduct />,
       },
     ],
   },

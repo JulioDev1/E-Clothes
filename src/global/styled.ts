@@ -1,4 +1,5 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
+
 export const GlobalStyles = createGlobalStyle`
  *{
     padding:0;
@@ -13,18 +14,3 @@ export const GlobalStyles = createGlobalStyle`
     background-color:#F1F1F1;
  }
  `;
-export const ProductsContent = styled.div`
-  width: 96%;
-  background-color: white;
-  margin: 70px auto 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 60px;
-  padding: 32px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
-`;

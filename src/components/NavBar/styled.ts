@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const NavBarContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,7 +44,7 @@ export const IconsRoute = styled.div`
 
 export const MenuContent = styled.div`
   display: flex;
-  gap: 100px;
+  gap: 70px;
   width: 100%;
   padding-left: 100px;
   justify-content: center;
@@ -53,6 +54,7 @@ export const MenuContent = styled.div`
   }
   margin-top: 20px;
 `;
+
 interface IOptions {
   selected: boolean;
 }

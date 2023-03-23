@@ -1,7 +1,6 @@
 import {
   Button,
   Description,
-  DescriptionContainer,
   ImageContainer,
   Price,
   PriceContainer,
@@ -32,16 +31,14 @@ export const ProductCard = ({
   imgUrl,
 }: Props) => {
   return (
-    <ProductContainer>
+    <ProductContainer key={id}>
       <ImageContainer>
         <ProductImage></ProductImage>
       </ImageContainer>
       <Title>
         <a href="">{name}</a>
       </Title>
-      <DescriptionContainer>
-        <Description>{description}</Description>
-      </DescriptionContainer>
+      <Description>{description}</Description>
       <PriceContainer>
         <Price>R${price}</Price>
       </PriceContainer>

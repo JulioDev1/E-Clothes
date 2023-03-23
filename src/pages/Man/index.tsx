@@ -1,9 +1,9 @@
-import api from "./../../services/api.js";
+import api from "../../services/api.js";
 import { useState, useEffect } from "react";
-import { ProductCard } from "./../../components/ProductCard";
-import { ProductsContent } from "../../global/styled";
+import { ProductCard } from "../../components/ProductCard";
+import { ProductsContainer, Title } from "../styles";
 
-export const Masculine = () => {
+export const Man = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -11,12 +11,14 @@ export const Masculine = () => {
   }, []);
 
   return (
-    <>
-      <ProductsContent>
+    <div>
+      <Title>Man</Title>
+
+      <ProductsContainer>
         {products.map((product) => {
           return ProductCard(product);
         })}
-      </ProductsContent>
-    </>
+      </ProductsContainer>
+    </div>
   );
 };

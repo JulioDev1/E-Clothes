@@ -18,8 +18,11 @@ import { useState } from "react";
 export const NavBar = () => {
   const options = [
     { path: "/", name: "Home", id: 1 },
-    { path: "/feminine", name: "Female", id: 2 },
-    { path: "/masculine", name: "Male", id: 3 },
+    { path: "/woman", name: "Woman", id: 2 },
+    { path: "/man", name: "Man", id: 3 },
+    { path: "/underwear", name: "Underwear", id: 4 },
+    { path: "/pants", name: "Pants", id: 5 },
+    { path: "/t_shirts", name: "T-shirts", id: 6 },
   ];
   const [select, setSelect] = useState(false);
 

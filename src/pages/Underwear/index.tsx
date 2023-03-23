@@ -1,20 +1,20 @@
-import api from './../../services/api.js';
+import api from '../../services/api.js';
 import { useState, useEffect } from 'react';
-import { ProductCard } from './../../components/ProductCard';
+import { ProductCard } from '../../components/ProductCard'
 import { ProductsContainer, Title } from "../styles";
 
-export const Home = () => {
+export const Underwear = () => {
   const [ products, setProducts ] = useState([]);
 
   useEffect(() => {
-    api.get("/home").then((res) => setProducts(res.data));
+    api.get("/underwear").then((res) => setProducts(res.data));
   }, []);
 
   return (
     <div>
-      <Title>Home</Title>
+      <Title>Underwear</Title>
 
-      <ProductsContainer>
+      <ProductsContainer className="products--container">
         {products.map((product) => {
           return ProductCard(product);
         })}
