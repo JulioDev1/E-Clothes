@@ -57,7 +57,6 @@ export const MenuContent = styled.div`
   
   a {
     text-decoration: none;
-    color: #000;
   }
 `;
 
@@ -65,15 +64,15 @@ interface IOptions {
   selected: boolean;
 }
 
-export const Options = styled.li<IOptions>`
+export const Options = styled.div`
   display: flex;
   gap: 28px;
   list-style: none;
+`;
 
-  a {
-    color: ${(props) => (props.selected ? "#E43F6F" : "black")};
-    transition: 0.2s;
-  }
+export const Option = styled.a<IOptions>`
+  color: ${props => props.selected ? '#E43F6F' : '#000000'};
+  transition: 0.2s;
 `;
 
 export const SearchDiv = styled.div`

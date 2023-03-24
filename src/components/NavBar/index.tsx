@@ -1,3 +1,5 @@
+import { useRouter } from "next/router";
+
 import {
   InputContent,
   NavBarContent,
@@ -7,6 +9,7 @@ import {
   IconsRoute,
   SearchDiv,
   Options,
+  Option,
   LogoContainer,
 } from "./styled";
 
@@ -14,9 +17,9 @@ import { Logo } from "../../icons/Logo";
 import { SearchIcon } from "../../icons/SearchIcon";
 import { User } from "../../icons/User";
 import { Cart } from "../../icons/Cart";
-// import { useState } from "react";
+
 export const NavBar = () => {
-  // const [select, setSelect] = useState(false);
+  const router = useRouter();
 
   const menuListItems = [
     { label: 'Man', href: '/man' },
@@ -47,9 +50,15 @@ export const NavBar = () => {
       </NavBarContent>
 
       <MenuContent>
-        <Options selected={false}>
+        <Options>
           {menuListItems.map((item) => (
-            <a key={item.label} href={item.href}>{item.label}</a>
+            <Option
+              key={item.label}
+              href={item.href}
+              selected={item.href === router.pathname}
+            >
+              {item.label}
+            </Option>
           ))}
         </Options>
       </MenuContent>
