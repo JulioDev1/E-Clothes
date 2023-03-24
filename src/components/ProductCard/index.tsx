@@ -10,26 +10,11 @@ import {
   Title,
 } from "./styles";
 
-interface Props {
-  id: number;
-  category: string;
-  gender: string;
-  name: string;
-  description: string;
-  promo: number;
-  imgUrl: string;
-  sizes: Array<object>;
-  price: string;
-}
-
 export const ProductCard = ({
   id,
   name,
-  gender,
   description,
   price,
-  promo,
-  imgUrl,
 }: Product) => {
   return (
     <ProductContainer key={id}>
@@ -37,7 +22,7 @@ export const ProductCard = ({
         <ProductImage></ProductImage>
       </ImageContainer>
       <Title>
-        <a href="">{name}</a>
+        <a href="/">{name}</a>
       </Title>
       <Description>{description}</Description>
       <PriceContainer>

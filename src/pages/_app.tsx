@@ -10,17 +10,17 @@ const App = ({
 }: AppProps): JSX.Element => {
   return (
     <>
+      <GlobalStyles />
+
+      <NavBar />
+
       <MainWrapper>
-        <GlobalStyles />
-
-        <NavBar />
-
         <Component
           {...pageProps}
         />
-
-        <Footer />
       </MainWrapper>
+
+      <Footer />
     </>
   );
 };

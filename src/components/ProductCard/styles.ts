@@ -1,22 +1,24 @@
 import styled from "styled-components";
 
 export const ProductContainer = styled.div`
+  width: 100%;
+  max-width: 320px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
   padding: 10px;
   border: #dddddd 1px solid;
-  width: 240px;
-  height: 350px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 3px;
+  border-radius: 4px;
   font-family: "Roboto";
 `;
   
 export const ImageContainer = styled.div`
-  margin-bottom: 12px;
-  width: 220px;
-  height: 170px;
+  width: 100%;
+  height: 200px;
 `;
+
 export const ProductImage = styled.div`
   width: 100%;
   height: 100%;
@@ -25,21 +27,21 @@ export const ProductImage = styled.div`
 
 export const Title = styled.h1`
   line-height: 20px;
-  margin-bottom: 10px;
   text-align: center;
-  height: 44px;
   display: flex;
   align-items: center;
+  margin: 6px 0;
+
   a {
     color: #adb5bd;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.5rem;
   }
 `;
 
 export const Description = styled.p`
-  font-size: 15px;
-  height: 40px;
+  font-size: 1rem;
+  height: 55px;
   width: 90%;
   overflow: hidden;
   width: 100%;
@@ -47,8 +49,6 @@ export const Description = styled.p`
 `;
 
 export const PriceContainer = styled.div`
-  width: 90%;
-  height: 35px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,10 +63,10 @@ export const Button = styled.button`
   font-size: 500;
   color: white;
   border: none;
-  height: 35px;
   width: 80%;
+  padding: 12px 0;
   font-family: "Roboto";
   cursor: pointer;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 4px;
 `;

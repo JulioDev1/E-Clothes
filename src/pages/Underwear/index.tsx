@@ -1,7 +1,8 @@
 import { ProductCard } from '../../components/ProductCard'
-import { ProductsContainer, Title } from "../styles";
+import { ProductsContainer } from "../styles";
 import { ProductsList, Product } from '../../models/Products';
 import { Product as ProductService } from '../../services/Product';
+import { Slider } from '../../components/Slider';
 
 interface UnderwearProps {
   products: ProductsList;
@@ -10,8 +11,8 @@ interface UnderwearProps {
 const Underwear: React.FC<UnderwearProps> = ({ products }) => {
   return (
     <>
-      <Title>Underwear</Title>
-
+      <Slider />
+      
       <ProductsContainer>
         {products.map((product: Product) => {
           return ProductCard(product);

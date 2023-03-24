@@ -1,7 +1,8 @@
 import { ProductCard } from '../../components/ProductCard'
-import { ProductsContainer, Title } from "../styles";
+import { ProductsContainer } from "../styles";
 import { ProductsList, Product } from '../../models/Products';
 import { Product as ProductService } from '../../services/Product';
+import { Slider } from '../../components/Slider';
 
 interface ManProps {
   products: ProductsList;
@@ -10,7 +11,7 @@ interface ManProps {
 const Man: React.FC<ManProps> = ({ products }) => {
   return (
     <>
-      <Title>Man</Title>
+      <Slider />
 
       <ProductsContainer>
         {products.map((product: Product) => {

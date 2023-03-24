@@ -1,24 +1,13 @@
 import styled from "styled-components";
 
-export const Title = styled.h1`
-    text-align: center;
-`
-
 export const ProductsContainer = styled.div`
-  width: 1000px;
   background-color: white;
-  margin: 70px auto 0 auto;
+  padding: 86px 48px;
+  border-radius: 4px;
+  justify-content: center;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 5px;
-  padding: 10px;
-  border-radius: 5px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . . ."
-    ". . . ."
-    ". . . .";
+  grid-gap: 40px 28px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
 `;
 
 export const ConfigContainer = styled.div`
