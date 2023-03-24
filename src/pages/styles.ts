@@ -7,7 +7,7 @@ export const ProductsContainer = styled.div`
   justify-content: center;
   display: grid;
   grid-gap: 40px 28px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
 `;
 
 export const ConfigContainer = styled.div`
