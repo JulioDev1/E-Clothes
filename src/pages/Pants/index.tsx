@@ -1,24 +1,36 @@
-import api from '../../services/api.js';
-import { useState, useEffect } from 'react';
 import { ProductCard } from '../../components/ProductCard'
 import { ProductsContainer, Title } from "../styles";
+import { ProductsList, Product } from '../../models/Products';
+import { Product as ProductService } from '../../services/Product';
 
-export const Pants = () => {
-  const [ products, setProducts ] = useState([]);
+interface PantsProps {
+  products: ProductsList;
+}
 
-  useEffect(() => {
-    api.get("/pants").then((res) => setProducts(res.data));
-  }, []);
-
+const Pants: React.FC<PantsProps> = ({ products }) => {
   return (
-    <div>
-      <Title>Pants</Title>
+    <>
+      <Title>Man</Title>
 
-      <ProductsContainer className="products--container">
-        {products.map((product) => {
+      <ProductsContainer>
+        {products.map((product: Product) => {
           return ProductCard(product);
         })}
       </ProductsContainer>
-    </div>
+    </>
   );
 };
+
+export default Pants;
+
+export async function getStaticProps() {
+  const products = await ProductService.getAll('/pants')
+  
+  return {
+    props: {
+      products,
+    },
+  }
+}
+
+

@@ -1,3 +1,4 @@
+import { Product } from "../../models/Products";
 import {
   Button,
   Description,
@@ -29,7 +30,7 @@ export const ProductCard = ({
   price,
   promo,
   imgUrl,
-}: Props) => {
+}: Product) => {
   return (
     <ProductContainer key={id}>
       <ImageContainer>

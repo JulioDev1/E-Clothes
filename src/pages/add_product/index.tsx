@@ -1,4 +1,4 @@
-import api from '../../services/api.js';
+import api from '../../services/api';
 import { useState, useEffect } from 'react';
 import { Title, ConfigContainer } from "../styles";
 import { 
@@ -10,7 +10,7 @@ import {
     Button
 } from "./styles";
 
-export const AddProduct = () => {
+const AddProduct = () => {
     const [ config, setConfig ] = useState([]);
 
     const [ name, setName ] = useState("");
@@ -40,7 +40,6 @@ export const AddProduct = () => {
 
     function addProduct(evt : any) {
         evt.preventDefault();
-        console.log('add product')
 
         if(name  &&  imageUrl  &&  description  &&  price) {
             api.post("/add_product", {
@@ -74,3 +73,5 @@ export const AddProduct = () => {
         </div>
     );
 };
+
+export default AddProduct

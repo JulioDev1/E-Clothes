@@ -42,17 +42,23 @@ export const IconsRoute = styled.div`
   gap: 20px;
 `;
 
+export const LogoContainer = styled.div`
+  cursor: pointer;
+  padding: 0 20px;
+`;
+
 export const MenuContent = styled.div`
   display: flex;
   gap: 70px;
   width: 100%;
   padding-left: 100px;
   justify-content: center;
+  margin-top: 20px;
+  
   a {
     text-decoration: none;
     color: #000;
   }
-  margin-top: 20px;
 `;
 
 interface IOptions {
@@ -60,6 +66,8 @@ interface IOptions {
 }
 
 export const Options = styled.li<IOptions>`
+  display: flex;
+  gap: 28px;
   list-style: none;
 
   a {
