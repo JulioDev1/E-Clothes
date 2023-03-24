@@ -2,7 +2,6 @@ import { useRouter } from "next/router";
 
 import {
   InputContent,
-  NavBarContent,
   NavBarContainer,
   MenuContent,
   Input,
@@ -31,11 +30,11 @@ export const NavBar = () => {
   
   return (
     <NavBarContainer>
-      <NavBarContent>
-        <LogoContainer onClick={() => window.location.assign('/')} >
-          <Logo />
-        </LogoContainer>
-        
+      <LogoContainer onClick={() => window.location.assign('/')} >
+        <Logo />
+      </LogoContainer>
+
+      <MenuContent>
         <InputContent>
           <Input type="text" placeholder="Search" />
           <SearchDiv>
@@ -43,25 +42,22 @@ export const NavBar = () => {
           </SearchDiv>
         </InputContent>
 
-        <IconsRoute>
-          <User />
-          <Cart />
-        </IconsRoute>
-      </NavBarContent>
-
-      <MenuContent>
         <Options>
           {menuListItems.map((item) => (
             <Option
               key={item.label}
               href={item.href}
               selected={item.href === router.pathname}
-            >
+              >
               {item.label}
             </Option>
           ))}
         </Options>
       </MenuContent>
+              <IconsRoute>
+                <User />
+                <Cart />
+              </IconsRoute>
     </NavBarContainer>
   );
 };

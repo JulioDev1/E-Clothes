@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const NavBarContainer = styled.div`
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   position: sticky;
   width: 100%;
   top: 0;
@@ -15,13 +15,6 @@ export const NavBarContainer = styled.div`
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
   -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
-`;
-
-export const NavBarContent = styled.div`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: space-around;
 `;
 
 export const Input = styled.input`
@@ -52,12 +45,10 @@ export const LogoContainer = styled.div`
 
 export const MenuContent = styled.div`
   display: flex;
-  gap: 70px;
-  width: 100%;
-  padding-left: 100px;
+  gap: 20px;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
-  
+  align-items: center;
   a {
     text-decoration: none;
   }
