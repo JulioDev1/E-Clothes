@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const NavBarContainer = styled.div`
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 999;
   height: 200px;
   background-color: white;
-  justify-content: columns;
   font-family: "Roboto";
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
   -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
@@ -60,17 +63,18 @@ export const MenuContent = styled.div`
   }
 `;
 
-interface IOptions {
-  selected: boolean;
-}
 
 export const Options = styled.div`
   display: flex;
   gap: 28px;
   list-style: none;
-`;
+  `;
 
-export const Option = styled.a<IOptions>`
+interface OptionStyledProps {
+  selected: boolean;
+}
+
+export const Option = styled.a<OptionStyledProps>`
   color: ${props => props.selected ? '#E43F6F' : '#000000'};
   transition: 0.2s;
 `;
