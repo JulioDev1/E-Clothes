@@ -4,11 +4,11 @@ import { ProductsList, Product } from '../../models/Products';
 import { Product as ProductService } from '../../services/Product';
 import { Slider } from '../../components/Slider';
 
-interface TShortsProps {
+interface TShirtsProps {
   products: ProductsList;
 }
 
-const TShorts: React.FC<TShortsProps> = ({ products }) => {
+const TShirts: React.FC<TShirtsProps> = ({ products }) => {
   return (
     <>
       <Slider />
@@ -22,10 +22,10 @@ const TShorts: React.FC<TShortsProps> = ({ products }) => {
   );
 };
 
-export default TShorts;
+export default TShirts;
 
 export async function getStaticProps() {
-  const products = await ProductService.getAll('/t_shorts')
+  const products = await ProductService.getAll('/t_shirts')
   
   return {
     props: {
