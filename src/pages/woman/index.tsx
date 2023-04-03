@@ -1,5 +1,5 @@
 import { ProductCard } from '../../components/ProductCard'
-import { ProductsContainer } from "../styles";
+import { ProductsContainer } from "../_styled";
 import { ProductsList, Product } from '../../models/Products';
 import { Product as ProductService } from '../../services/Product';
 import { Slider } from '../../components/Slider';
@@ -25,7 +25,7 @@ const Woman: React.FC<WomanProps> = ({ products }) => {
 export default Woman;
 
 export async function getStaticProps() {
-  const products = await ProductService.getAll('/woman')
+  const products = await ProductService.getAll('/home/?gender=woman')
   
   return {
     props: {

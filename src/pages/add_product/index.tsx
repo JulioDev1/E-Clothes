@@ -1,13 +1,11 @@
 import api from '../../services/api';
 import { useState, useEffect } from 'react';
-import { Title, ConfigContainer } from "../styles";
+import { Title, ConfigContainer, Form, Button } from "../_styled";
 import { 
-    Form,
     NameInput,
     ImageUrlInput,
     DescriptionInput,
-    PriceInput,
-    Button
+    PriceInput
 } from "./styles";
 
 const AddProduct = () => {

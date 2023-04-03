@@ -1,5 +1,5 @@
 import { ProductCard } from '../../components/ProductCard'
-import { ProductsContainer } from "../styles";
+import { ProductsContainer } from "../_styled";
 import { ProductsList, Product } from '../../models/Products';
 import { Product as ProductService } from '../../services/Product';
 import { Slider } from '../../components/Slider';
@@ -25,7 +25,7 @@ const TShirts: React.FC<TShirtsProps> = ({ products }) => {
 export default TShirts;
 
 export async function getStaticProps() {
-  const products = await ProductService.getAll('/t_shirts')
+  const products = await ProductService.getAll('/home/?category=t_shirts')
   
   return {
     props: {
