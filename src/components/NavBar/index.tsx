@@ -1,4 +1,6 @@
 import { useRouter } from "next/router";
+import { Category as CategoriesService } from '../../services/Category';
+import { CategoriesList, Category } from '../../models/Categories';
 
 import {
   InputContent,
@@ -17,7 +19,11 @@ import { SearchIcon } from "../../icons/SearchIcon";
 import { User } from "../../icons/User";
 import { Cart } from "../../icons/Cart";
 
-export const NavBar = () => {
+interface NavBarProps {
+  categories: CategoriesList;
+}
+
+export const NavBar: React.FC<NavBarProps> = ({ categories }) => {
   const router = useRouter();
 
   const menuListItems = [
@@ -61,3 +67,13 @@ export const NavBar = () => {
     </NavBarContainer>
   );
 };
+
+export async function getStaticProps() {
+  const categories = await CategoriesService.getCategories();
+  
+  return {
+    props: {
+      categories,
+    },
+  }
+}
