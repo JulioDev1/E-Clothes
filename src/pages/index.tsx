@@ -1,5 +1,5 @@
 import { ProductCard } from '../components/ProductCard';
-import { ProductsContainer } from "./styles";
+import { ProductsContainer } from "./_styled";
 import { Product as ProductService } from '../services/Product';
 import { Product, ProductsList } from '../models/Products';
 
