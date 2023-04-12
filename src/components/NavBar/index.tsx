@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState, useEffect } from 'react';
 import { Category as CategoriesService } from '../../services/Category';
 import { CategoriesList, Category } from '../../models/Categories';
 
@@ -19,20 +20,19 @@ import { SearchIcon } from "../../icons/SearchIcon";
 import { User } from "../../icons/User";
 import { Cart } from "../../icons/Cart";
 
-interface NavBarProps {
-  categories: CategoriesList;
-}
-
-export const NavBar: React.FC<NavBarProps> = ({ categories }) => {
+export const NavBar = () => {
   const router = useRouter();
+  const [ categories, setCategories ] = useState<CategoriesList>([]);
 
-  const menuListItems = [
-    { label: 'Man', href: '/man' },
-    { label: 'Woman', href: '/woman' },
-    { label: 'Pants', href: '/pants' },
-    { label: 'T-Shirts', href: '/t_shirts' },
-    { label: 'Underwear', href: '/underwear' },
-  ]
+
+  async function getCategories() {
+    const data: CategoriesList = await CategoriesService.getCategories();
+    setCategories(data);
+  }
+
+  useEffect(() => {
+    getCategories()
+  }, []);
   
   return (
     <NavBarContainer>
@@ -49,13 +49,12 @@ export const NavBar: React.FC<NavBarProps> = ({ categories }) => {
         </InputContent>
 
         <Options>
-          {menuListItems.map((item) => (
+          {categories.map((category: Category, key) => (
             <Option
-              key={item.label}
-              href={item.href}
-              selected={item.href === router.pathname}
+              key={key}
+              selected={category.value === router.pathname}
               >
-              {item.label}
+              {category.value}
             </Option>
           ))}
         </Options>
@@ -67,13 +66,3 @@ export const NavBar: React.FC<NavBarProps> = ({ categories }) => {
     </NavBarContainer>
   );
 };
-
-export async function getStaticProps() {
-  const categories = await CategoriesService.getCategories();
-  
-  return {
-    props: {
-      categories,
-    },
-  }
-}
