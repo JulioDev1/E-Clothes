@@ -20,27 +20,38 @@ export const MainWrapper = styled.div`
 
 export const Title = styled.h1`
   font-size: 20px;
-`
+
+  font-family: "Roboto";
+`;
 
 export const Form = styled.form`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-    gap: 15px;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  gap: 15px;
+`;
 
 export const Input = styled.input`
-    padding: 5px 10px;
-    border-radius: 2px;
-    border: 1px solid gray;
-    width: 100%;
-`
+  padding: 5px 10px;
+  border-radius: 2px;
+  border: 1px solid gray;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #727272;
+  height: 35px;
+`;
 
 export const Button = styled.button`
-    padding: 5px 10px;
-    cursor: pointer;
-`
+  padding: 5px 10px;
+  cursor: pointer;
+  font-family: "Roboto";
+  width: 100%;
+  border: none;
+  background-color: #e43f6f;
+  color: white;
+  height: 2.5rem;
+`;
 
 export const ProductsContainer = styled.div`
   background-color: white;
@@ -53,12 +64,18 @@ export const ProductsContainer = styled.div`
 `;
 
 export const ConfigContainer = styled.div`
-  width: 1000px;
+  width: 400px;
   background-color: white;
   margin: 70px auto 0 auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   gap: 25px;
+  height: 400px;
   padding: 10px;
   border-radius: 5px;
+  -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
 `;
