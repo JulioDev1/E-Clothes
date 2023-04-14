@@ -1,5 +1,5 @@
 import api from "../../services/api";
-import { useState, useEffect } from "react";
+import { useState, useEffect, ChangeEvent } from "react";
 import { Title, ConfigContainer, Form, Button } from "../_styled";
 import {
   NameInput,
@@ -16,27 +16,27 @@ const AddProduct = () => {
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
 
-  function handleName(evt: any) {
+  function handleName(evt: React.ChangeEvent<HTMLInputElement>) {
     const data = evt.target.value;
     setName(data);
   }
 
-  function handleImageUrl(evt: any) {
+  function handleImageUrl(evt: React.ChangeEvent<HTMLInputElement>) {
     const data = evt.target.value;
     setImageUrl(data);
   }
 
-  function handleDescription(evt: any) {
+  function handleDescription(evt: React.ChangeEvent<HTMLInputElement>) {
     const data = evt.target.value;
     setDescription(data);
   }
 
-  function handlePrice(evt: any) {
+  function handlePrice(evt: React.ChangeEvent<HTMLInputElement>) {
     const data = evt.target.value;
     setPrice(data);
   }
 
-  function addProduct(evt: any) {
+  function addProduct(evt: React.FormEvent<HTMLButtonElement>) {
     evt.preventDefault();
 
     if (name && imageUrl && description && price) {
