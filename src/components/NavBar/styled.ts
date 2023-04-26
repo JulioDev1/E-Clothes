@@ -67,6 +67,7 @@ interface OptionStyledProps {
 
 export const Option = styled.a<OptionStyledProps>`
   color: ${props => props.selected ? '#E43F6F' : '#000000'};
+  cursor: pointer;
   transition: 0.2s;
 `;
 

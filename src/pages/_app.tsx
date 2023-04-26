@@ -3,6 +3,8 @@ import { Footer } from '../components/Footer';
 import { NavBar } from '../components/NavBar';
 import { GlobalStyles } from '../global/styled';
 import { MainWrapper } from './_styled';
+import store from './store';
+import { Provider } from 'react-redux';
 
 const App = ({
   Component,
@@ -10,18 +12,20 @@ const App = ({
 }: AppProps): JSX.Element => {
   return (
     <>
-      <GlobalStyles />
+      <Provider store={store}>
+          <GlobalStyles />
 
-      <NavBar />
+          <NavBar />
 
-      <MainWrapper>
-        <Component
-          {...pageProps}
-        />
-      </MainWrapper>
+          <MainWrapper>
+            <Component
+              {...pageProps}
+            />
+          </MainWrapper>
 
-      <Footer />
-    </>
+          <Footer />
+      </Provider>
+      </>
   );
 };
 
