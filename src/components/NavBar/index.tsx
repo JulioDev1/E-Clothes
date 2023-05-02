@@ -65,8 +65,12 @@ export const NavBar = () => {
         </Options>
       </MenuContent>
               <IconsRoute>
-                <User />
-                <Cart />
+                <a href="/user">
+                  <User />
+                </a>
+                <a href="/cart">
+                  <Cart />
+                </a>
               </IconsRoute>
     </NavBarContainer>
   );
