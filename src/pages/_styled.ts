@@ -55,7 +55,7 @@ export const Button = styled.button`
 
 export const ProductsContainer = styled.div`
   background-color: white;
-  padding: 86px 48px;
+  padding: 20px 48px;
   border-radius: 4px;
   justify-content: center;
   display: grid;

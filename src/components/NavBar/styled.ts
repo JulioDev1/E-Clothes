@@ -9,7 +9,7 @@ export const NavBarContainer = styled.div`
   width: 100%;
   top: 0;
   z-index: 999;
-  height: 200px;
+  height: 100px;
   background-color: white;
   font-family: "Roboto";
   -webkit-box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.27);
