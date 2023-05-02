@@ -12,6 +12,7 @@ export const ProductContainer = styled.div`
   border: #dddddd 1px solid;
   border-radius: 4px;
   font-family: "Roboto";
+  cursor: pointer;
 `;
   
 export const ImageContainer = styled.div`

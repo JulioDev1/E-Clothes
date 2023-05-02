@@ -8,7 +8,7 @@ import { changeCategory } from '../../pages/storyCategory';
 import {
   InputContent,
   NavBarContainer,
-  MenuContent,
+  MenuContainer,
   Input,
   IconsRoute,
   SearchDiv,
@@ -43,7 +43,7 @@ export const NavBar = () => {
         <Logo />
       </LogoContainer>
 
-      <MenuContent>
+      <MenuContainer>
         <InputContent>
           <Input type="text" placeholder="Search" />
           <SearchDiv>
@@ -63,7 +63,7 @@ export const NavBar = () => {
             </Option>
           ))}
         </Options>
-      </MenuContent>
+      </MenuContainer>
               <IconsRoute>
                 <a href="/user">
                   <User />
