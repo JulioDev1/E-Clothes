@@ -13,6 +13,11 @@ export const ProductContainer = styled.div`
   border-radius: 4px;
   font-family: "Roboto";
   cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: scale(1.01);
+  }
 `;
   
 export const ImageContainer = styled.div`
