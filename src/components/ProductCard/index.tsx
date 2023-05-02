@@ -17,18 +17,18 @@ export const ProductCard = ({
   price,
 }: Product) => {
   return (
-    <ProductContainer key={id}>
-      <ImageContainer>
-        <ProductImage></ProductImage>
-      </ImageContainer>
-      <Title>
-        <a href="/">{name}</a>
-      </Title>
-      <Description>{description}</Description>
-      <PriceContainer>
-        <Price>R${price}</Price>
-      </PriceContainer>
-      <Button>Adicionar ao Carrinho</Button>
+    <ProductContainer key={id} href="/product">
+        <ImageContainer>
+          <ProductImage></ProductImage>
+        </ImageContainer>
+        <Title>
+          <a href="/">{name}</a>
+        </Title>
+        <Description>{description}</Description>
+        <PriceContainer>
+          <Price>R${price}</Price>
+        </PriceContainer>
+        <Button>Adicionar ao Carrinho</Button>
     </ProductContainer>
   );
 };

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ProductContainer = styled.div`
+export const ProductContainer = styled.a`
   width: 100%;
   max-width: 320px;
   display: flex;
@@ -14,6 +14,11 @@ export const ProductContainer = styled.div`
   font-family: "Roboto";
   cursor: pointer;
   transition: all 0.2s;
+  text-decoration: none;
+
+  &:visited {
+    color: black;
+  }
 
   &:hover {
     transform: scale(1.01);
