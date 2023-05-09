@@ -35,11 +35,20 @@ export const Form = styled.form`
 export const Input = styled.input`
   padding: 5px 10px;
   border-radius: 2px;
-  border: 1px solid gray;
+  border: 1px solid #cccc;
   width: 100%;
   border-radius: 5px;
-  border: 1px solid #727272;
-  height: 35px;
+  padding-left: 28px;
+  height: 40px;
+  font-family: "Roboto" sans-serif;
+  transition: 0.2s border 0s;
+  :focus {
+    outline: none;
+    border: 1px solid #e43f6f;
+    ::placeholder {
+      color: #e43f6f;
+    }
+  }
 `;
 
 export const Button = styled.button`
