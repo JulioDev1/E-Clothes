@@ -8,14 +8,18 @@ type ProductsSizes = {
 
 export type Product = {
   id: number,
-  category: string,
-  gender: 'male' | 'woman',
+  category_id: number,
+  category_name: string,
+  sub_category?: string,
+  brand?: string,
+  gender: boolean,
   name: string,
   description: string,
-  price: string,
+  price: number,
   promo: number,
-  imgUrl: string,
-  sizes: ProductsSizes
+  thumb_url: string,
+  images_url?: string,
+  sizes: string
 }
 
 export type ProductsList = Product[];

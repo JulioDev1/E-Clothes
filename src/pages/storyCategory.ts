@@ -5,6 +5,7 @@ import { RootState } from './store'
 const initialState: Category = {
     value: ' ',
     type: ' ',
+    name: ' ',
 }
 
 export const categorySlice = createSlice({
@@ -14,6 +15,7 @@ export const categorySlice = createSlice({
         changeCategory: (state, action: PayloadAction<Category>) => {
             state.value = action.payload.value;
             state.type = action.payload.type;
+            state.name = action.payload.name;
         },
     }
 });

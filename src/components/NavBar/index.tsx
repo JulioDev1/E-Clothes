@@ -30,6 +30,8 @@ export const NavBar = () => {
 
   async function getCategories() {
     const data: CategoriesList = await CategoriesService.getCategories();
+
+
     setCategories(data);
   }
 
@@ -57,12 +59,12 @@ export const NavBar = () => {
               key={key}
               onClick={() =>
                 dispatch(
-                  changeCategory({ value: category.value, type: category.type })
+                  changeCategory(category)
                 )
               }
-              selected={category.value === stateCategory.value}
+              selected={category.name === stateCategory.name}
             >
-              {category.value}
+              {category.name}
             </Option>
           ))}
         </Options>

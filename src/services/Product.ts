@@ -1,4 +1,4 @@
-import { ProductsList } from "../models/Products"
+import { ProductsList, Product as ProductModel } from "../models/Products"
 import api from "./api";
 
 export class Product {
@@ -11,5 +11,16 @@ export class Product {
     });
 
     return products;
+  }
+
+  public static get = async (path: string): Promise<ProductModel> => {
+    let product
+
+    product = await api.get(`${path}`)
+    .then((res) => {
+      return res.data;
+    });
+
+    return product;
   }
 }
