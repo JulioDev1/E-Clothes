@@ -22,7 +22,7 @@ const product = await ProductService.get('/product/?id=2')
 
 return {
     props: {
-    product,
+      product,
     },
 }
 }

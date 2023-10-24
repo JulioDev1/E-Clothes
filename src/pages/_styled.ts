@@ -60,6 +60,7 @@ export const Button = styled.button`
   background-color: #e43f6f;
   color: white;
   height: 2.5rem;
+  border-radius: 8px;
 `;
 
 export const ProductsContainer = styled.div`
