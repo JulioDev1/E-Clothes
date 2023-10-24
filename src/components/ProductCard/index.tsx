@@ -1,4 +1,5 @@
 import { Product } from "../../models/Products";
+import Link from 'next/link';
 import {
   Button,
   Description,
@@ -21,12 +22,14 @@ export const ProductCard = ({
         <ImageContainer>
           <ProductImage></ProductImage>
         </ImageContainer>
-        <Title>
-          <a href="/">{name}</a>
-        </Title>
+
+        <Title>{name}</Title>
+        
         <Description>{description}</Description>
+        
         <PriceContainer>
           <Price>R${price}</Price>
+        
         </PriceContainer>
         <Button>Adicionar ao Carrinho</Button>
     </ProductContainer>

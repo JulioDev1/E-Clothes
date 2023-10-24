@@ -42,12 +42,9 @@ export const Title = styled.h1`
   display: flex;
   align-items: center;
   margin: 6px 0;
-
-  a {
-    color: #adb5bd;
-    text-decoration: none;
-    font-size: 1.5rem;
-  }
+  color: #adb5bd;
+  text-decoration: none;
+  font-size: 1.5rem;
 `;
 
 export const Description = styled.p`
