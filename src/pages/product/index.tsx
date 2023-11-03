@@ -8,7 +8,6 @@ interface ProductInterface {
 const Product: React.FC<ProductInterface> = ({product}) => {
     return (
       <>
-  
         <h1>salve</h1>
         <div>{product.name}</div>
      </>
@@ -17,12 +16,15 @@ const Product: React.FC<ProductInterface> = ({product}) => {
 
 export default Product;
 
-export async function getStaticProps() {
-const product = await ProductService.get('/product/?id=2')
+export async function getServerSideProps(context: any) {
+  const { query } = context;
+  console.log("query: ", query)
 
-return {
-    props: {
-      product,
-    },
-}
+  const product = await ProductService.get(`/product/?id=${query.id}`)
+
+  return {
+      props: {
+        product,
+      },
+  }
 }
