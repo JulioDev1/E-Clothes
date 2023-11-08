@@ -11,14 +11,11 @@ const Home: React.FC = () => {
   const [ products, setProducts ] = useState<ProductsList>([]);
 
   async function getProducts() {
-    if(category.value == " " &&  category.type == " ") {
+    if(category.name == " ") {
       const products = await ProductService.getAll('/home');
       setProducts(products);
-    } else if(category.type == 'gender'){
-      const products = await ProductService.getAll(`/home/?gender=${category.value}`);
-      setProducts(products);
-    } else if(category.type == 'category') {
-      const products = await ProductService.getAll(`/home/?category=${category.value}`);
+    } else {
+      const products = await ProductService.getAll(`/home/?category=${category.name}`);
       setProducts(products);
     }
   }

@@ -1,7 +1,6 @@
 export type Category = {
-    type: string,
-    value: string,
-    name: string
+    name: string,
+    order: number
 }
 
 export type CategoriesList = Category[];
